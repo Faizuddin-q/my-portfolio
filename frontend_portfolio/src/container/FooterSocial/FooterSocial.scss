@@ -1,0 +1,29 @@
+.social-media-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    background-color: #FFFFFF;
+    
+  
+    @media (min-width: 768px) {
+      margin-top: 0.5rem;
+    }
+  
+    .social-media-icon {
+      width: 35px;
+      height: 35px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.5s;
+  
+      &:hover {
+        
+        scale: 1.2;
+      }
+  
+      &.mr-6 {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+  
