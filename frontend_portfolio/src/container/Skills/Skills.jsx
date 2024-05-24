@@ -13,7 +13,7 @@ const Skills = () => {
   useEffect(() => {
     const query = '*[_type == "experiences"]';
     const skillsQuery = '*[_type == "skills"]';
-    const workExperienceQuery = '*[_type == "workExperience"]';
+    // const workExperienceQuery = '*[_type == "workExperience"]';
 
     client.fetch(query).then((data) => {
       setExperiences(data);
@@ -22,9 +22,9 @@ const Skills = () => {
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
     });
-    client.fetch(workExperienceQuery).then((data) => {
-      setWorkExperiences(data);
-    });
+    // client.fetch(workExperienceQuery).then((data) => {
+    //   setWorkExperiences(data);
+    // });
   }, []);
 
   return (
@@ -72,10 +72,12 @@ const Skills = () => {
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
-                      <p className=" desc text-black">{work.desc}</p>
+                      <p className="desc text-black">{work.desc}</p>
                       
                     </motion.div>
+                   
 
+                    
                     {/* <Tooltip
                       id={work.desc}
                       effect="solid"

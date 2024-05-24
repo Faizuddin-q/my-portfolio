@@ -2,17 +2,19 @@ import  { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import './Navbar.scss'
-const Navbar = () => {
+
+const Navbar = ({active}) => {
 
   const navList=['home', 'about', 'projects', 'skills' , 'contact'];
   const [toggle, setToggle] = useState(false);
   
   return (
-    <motion.nav className=' app__navbar'
-    whileInView={{ x: [100, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.5 }}>
+    <div className="app__navbar__main">
+    <nav className=' app__navbar'>
       <div className=' app__navbar-logo'>
-         <a href="/">
+         <a href="/"
+          
+         >
           <motion.div
           whileInView={{ x: [100, 0], opacity: [0.2, 1] }}
           transition={{ duration: 0.5 }}>
@@ -24,9 +26,12 @@ const Navbar = () => {
         {navList.map((item)=>(
           <li key={`link-${item}`}
           className=' app__flex p-text'
+          
           >
             <div/>
-            <a className='section-links' href={`#${item}`}>{item}</a>
+            <a className='section-links' href={`#${item}`}
+            
+            >{item}</a>
           </li>
         ))}
         </ul>
@@ -38,7 +43,7 @@ const Navbar = () => {
               <motion.div
               // whileInView={{ x:[-300, 0]}}
               // transition={{duration: 0.85, ease:'easeOut' }}
-                initial={{ x: -200, opacity: 0 }}
+                initial={{ x: 200, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
               >
@@ -55,7 +60,8 @@ const Navbar = () => {
               </motion.div>
             )}
         </div>
-    </motion.nav>
+    </nav>
+    </div>
   )
 }
 
