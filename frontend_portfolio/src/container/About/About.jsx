@@ -53,6 +53,7 @@ const About = () => {
                   : images.aboutmine
               }
               alt="Profile"
+
             />
           </div>
         </div>
@@ -86,7 +87,8 @@ const About = () => {
               Resume
             </button> */}
           <div className="resume-btn" onClick={viewResumeHandler}>
-            <AwesomeButton className="awesome-btn" type="primary" >
+            <AwesomeButton className="awesome-btn" type="primary" 
+            id="resume">
               Resume
             </AwesomeButton>
             {/* <button className="btn" type="button" onClick={viewResumeHandler}>
@@ -118,7 +120,7 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
+            <img src={urlFor(about.imgUrl)} alt={about.title} loading='lazy'/>
             <h2 className="bold-text" style={{ marginTop: "20px" }}>
               {about.title}
             </h2>

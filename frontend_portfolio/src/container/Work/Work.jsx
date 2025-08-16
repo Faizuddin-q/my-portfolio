@@ -88,7 +88,7 @@ const Work = () => {
             <div
               className="app__work-img app__flex"
             >
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={urlFor(work.imgUrl)} alt={work.name} loading='lazy'/>
             </div>
 
             <div className="app__work-content app__flex">

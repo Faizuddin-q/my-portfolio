@@ -1,12 +1,14 @@
-import {  createClient } from "@sanity/client";
+import { createClient } from "@sanity/client";
 import imageUrlBuilder from '@sanity/image-url'
 
 export const client = createClient({
-    projectId: import.meta.env.SANITY_STUDIO_PROJECT_ID,
+    projectId: "imtri8ks",
+    // projectId: import.meta.env.SANITY_STUDIO_PROJECT_ID,
     dataset: 'production',
     apiVersion: '2024-05-15',
     useCdn: true,
-    token: import.meta.env.SANITY_STUDIO_API_TOKEN,
+    token: 'skDwItinHpTTow6iP9Y8m17kPqcqo2H9BdKtePH0X7F7gHHI0NhRC8Zcn4b5y7IJxUOql9XiLQ2Y6c02seYD23vSysLwz06VWwT5hzBDDUTV3WGKsrGuZHIZNZwdkqm7hY78m4DvO2VfEyASTwC1tqCgPLCcPOZnC4ud64RflNL8FJtYkcVs',
+    // token: import.meta.env.SANITY_STUDIO_API_TOKEN,
 });
 
 const builder = imageUrlBuilder(client);
