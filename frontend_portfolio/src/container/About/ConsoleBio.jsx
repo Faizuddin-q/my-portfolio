@@ -9,7 +9,7 @@ const ConsoleBio = () => {
     const skillsQuery = '*[_type == "skills"]';
     
     client.fetch(skillsQuery).then((data) => {
-      const prioritizedSkills = ["React JS", "JavaScript", "Redux", "C++"];
+      const prioritizedSkills = ["C++", "JavaScript", "TypeScript","React JS", "MERN Stack", "Redux"];
       
       // Separate prioritized skills and other skills
       const fetchedSkills = data.map(skill => skill.name);
